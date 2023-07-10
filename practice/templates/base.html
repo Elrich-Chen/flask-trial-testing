@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='header.css')}}">
+
+        {% if title %}
+            <title>{{title}}</title>
+        {% else %}
+            <title>Flask Website</title>
+        {% endif %}
+
+        <div class="header">
+            ELRICHS WEBSITE
+        </div>
+    </head>
+    <body style="height: 3000px; padding-top: 100px;"> 
+        {% block content %}
+        <h1>This is the base template page</h1>
+        {% endblock content %}
+    </body>
+</html>
